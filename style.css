@@ -1,0 +1,20 @@
+html{
+    background: url("stars4.jpeg");
+    background-size: cover;
+    color:white;
+    padding: 50px;
+    font-family: 'JetBrains Mono', monospace;
+    display: block;
+
+}
+.h1{
+    font-size: 100px;
+    letter-spacing: 40px;
+    margin: auto;
+    padding: 50px;
+
+}
+.p1{
+    font-size:25px;
+    margin:auto;
+}
