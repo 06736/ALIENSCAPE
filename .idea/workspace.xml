@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="" />
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/purplenebula.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ALIENSCAPE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ALIENSCAPE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stars3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,19 +45,34 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lQgE5kLuAFKNRTSgVUE8pQZbyi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bmyna\WebstormProjects\ALIENSCAPE" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -40,14 +83,33 @@
       <option name="presentableId" value="Default" />
       <updated>1607534614028</updated>
       <workItem from="1607534615183" duration="5608000" />
-      <workItem from="1607621629775" duration="5429000" />
+      <workItem from="1607621629775" duration="10045000" />
+      <workItem from="1607707628322" duration="9953000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1208" y="280" key="#Images/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607631627846" />
     <state x="536" y="147" key="#JSHint" timestamp="1607540467586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -56,6 +118,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607535232876" />
+    <state x="-1230" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607631638441">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1230" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607631638441" />
+    <state x="-1088" y="369" key="Github.ShareDialog" timestamp="1607630343809">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1088" y="369" key="Github.ShareDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607630343809" />
+    <state x="-1171" y="169" key="Github.UntrackedFilesDialog" timestamp="1607630349060">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1171" y="169" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607630349060" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1607540462249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -64,5 +138,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607536438504" />
+    <state x="-1784" y="220" key="run.anything.popup" timestamp="1607719117588">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1784" y="220" key="run.anything.popup/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607719117588" />
   </component>
 </project>

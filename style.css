@@ -17,4 +17,28 @@ html{
 .p1{
     font-size:25px;
     margin:auto;
+    padding: 50px;
+}
+
+.btn{
+    background: url("purplenebula.jpg");
+    margin: 50px;
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: transparent;
+    border-radius: 20px;
+
+}
+.button_style {
+    background: url("purplenebula.jpg");
+    margin: 50px;
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: transparent;
+    border-radius: 20px;
+
 }
