@@ -27,7 +27,7 @@ function play_the_game(){
     main_menu();
 
     setTimeout("courtyard_initial()", 2000)
-    courtyard_initial();
+
 
 
 }
