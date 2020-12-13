@@ -14,12 +14,16 @@ function main_menu() {
     });
 }
 function new_input(){
-    let input = document.createElement("INPUT");
+    let input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("id", "input");
+    input.addEventListener("keyup",function(event){
+        if(event.which == 13){
+            let x = $("input").val();
+            console.log(x);
+        }
+    });
     document.body.appendChild(input);
-    let x = $("input").val();
-    console.log(x);
 }
 function courtyard_initial(){
     $(".p1").append("Slowly, you open your eyes. You are in the middle of a courtyard, enclosed between four ancient dusty walls." +
