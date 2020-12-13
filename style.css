@@ -1,12 +1,17 @@
-html{
+
+body{
     background: url("stars4.jpeg");
     background-size: cover;
     color:white;
-    padding: 50px;
+    padding: 100px;
     font-family: 'JetBrains Mono', monospace;
-    display: block;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
 
 }
+
 .h1{
     font-size: 100px;
     letter-spacing: 40px;
@@ -22,7 +27,8 @@ html{
 
 .btn{
     background: url("purplenebula.jpg");
-    margin: 50px;
+
+    margin: auto;
     width: 500px;
     height: 50px;
     border: none;
@@ -31,14 +37,20 @@ html{
     border-radius: 20px;
 
 }
-.button_style {
-    background: url("purplenebula.jpg");
-    margin: 50px;
+input[type="text"] {
+    background: url("blue_nebula.jpg");
+    background-size: auto;
+    margin: auto;
     width: 500px;
+
     height: 50px;
     border: none;
     outline: none;
-    color: transparent;
     border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
 
 }
