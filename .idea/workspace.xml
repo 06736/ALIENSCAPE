@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="Has working main menu button">
-      <change afterPath="$PROJECT_DIR$/blue_nebula.jpg" afterDir="false" />
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="working input, thanks to the legend Tom Steer">
+      <change afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +35,8 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -88,6 +87,8 @@
       <workItem from="1607621629775" duration="10045000" />
       <workItem from="1607707628322" duration="10476000" />
       <workItem from="1607789184370" duration="6890000" />
+      <workItem from="1607872526089" duration="2956000" />
+      <workItem from="1609002326949" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -117,7 +118,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607789889879</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="input shows but nothing is assigned">
+      <created>1607872778822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607872778822</updated>
+    </task>
+    <task id="LOCAL-00006" summary="input shows but nothing is assigned">
+      <created>1607873545399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607873545399</updated>
+    </task>
+    <task id="LOCAL-00007" summary="working input, thanks to the legend Tom Steer">
+      <created>1607873625846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607873625846</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +162,9 @@
     <MESSAGE value="Has working main menu button, js needs a bit of touching (order-wise)" />
     <MESSAGE value="Slight bug on button press other than that works as expected" />
     <MESSAGE value="Has working main menu button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Has working main menu button" />
+    <MESSAGE value="input shows but nothing is assigned" />
+    <MESSAGE value="working input, thanks to the legend Tom Steer" />
+    <option name="LAST_COMMIT_MESSAGE" value="working input, thanks to the legend Tom Steer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
@@ -167,18 +191,26 @@
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
     <state x="-1171" y="169" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607630349060" />
+    <state x="-1736" y="37" key="MergeDialog" timestamp="1607873468045">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1736" y="37" key="MergeDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607873468045" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1607540462249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607540462249" />
-    <state x="-1368" y="144" key="Vcs.Push.Dialog.v2" timestamp="1607796517357">
+    <state x="-1368" y="144" key="Vcs.Push.Dialog.v2" timestamp="1607872786621">
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
-    <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607796517357" />
+    <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607872786621" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607536438504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607536438504" />
+    <state x="-1143" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607873535045">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1143" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607873535045" />
     <state x="-1784" y="220" key="run.anything.popup" timestamp="1607719117588">
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
