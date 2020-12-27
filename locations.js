@@ -40,22 +40,24 @@ let locations = [
         description: "You shoot out the lock with the handgun, the recoil of which is horrid and jolts " +
             " your arm. You continue down a very short passage until you reach a small room. " +
             " Inside, there is a large 3D printer, with trays to put the materials inside of." +
-            " On top of which, there is a manual with all the items you can craft with it.",
+            " On top of which, there is a manual with all the items you can craft with it. To craft anything," +
+            "just enter 'craft' + the name of the item you want to craft whilst within this room",
         requirement: "You need a handgun to break through this door!",
         items: "You have acquired: the 3D printing manual. Press 'M', to read it, at any time!"
     },
     {// index 4
         name: "The Moon Room",
-        description: "You open the door to the moon room. It is a large, square room, with eerily \n" +
-            "modern walls for such an old building. You step inside, and a harsh white light \n" +
-            "blinks on. There are at least a dozen pedestals, each with a pale, dusty stone\n" +
-            "on display behind the thin sheen of glass. Each has a label, stating:\n" +
-            "SPECEMIN FROM THE DARK SIDE OF THE MOON\n" +
-                "However, you are drawn towards the pedestal in the centre.\n" +
-            "The writing is hardly legible as it is clear an attempt has been made to \n" +
-            "scratch it off.\n" +
-            "SP*CEM*N FR*M  *I**N\n" +
-            "The rock here was a deep shade of black. You put your head closer.\n" +
+        description: "You open the door to the moon room. It is a large, square room, with eerily " +
+            "modern walls for such an old building. You step inside, and a harsh white light " +
+            "blinks on. There are at least a dozen pedestals, each with a pale, dusty stone" +
+            "on display behind the thin sheen of glass. Each has a label, stating:" +
+            "SPECEMIN FROM THE DARK SIDE OF THE MOON",
+
+        on_look_around: "you are drawn towards the pedestal in the centre." +
+            "The writing is hardly legible as it is clear an attempt has been made to" +
+            "scratch it off." +
+            "SP*CEM*N FR*M  *I**N" +
+            "The rock here was a deep shade of black. You put your head closer." +
             "The rock is covered in pinpricks of pulsating, purple light",
         requirement: "none",
     },
@@ -64,6 +66,7 @@ let locations = [
         description: "You enter the Sun Room. Inside, there is a miniscule nuclear fusion reactor, \n" +
             "small enough to fit in the palm of a human hand. It has a small red button on it,  \n" +
             "which states 'Power On'. You decide not to click it due to how rusty it looks.",
+        on_look_around: "",
         requirement: "none",
     },
     { // index 6
@@ -76,8 +79,8 @@ let locations = [
             "COLLECT'. You press the button, the glass pedestal crashes and - silence.\n" +
             "The collector is also much heavier now. Another prompt shows up on the screen:\n" +
             "'PRESS HERE TO CONCENTRATE'. You press again, and instantaneously, \n" +
-            "a small black ball is in the middle of the capsule. To the far side of the room, \n" +
-            "there is another door with a sign next to it, stating: 'DO NOT ENTER'",
+            "a small black ball is in the middle of the capsule. " ,
+        on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'",
         requirement: "black key",
     },
     { // index 7

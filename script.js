@@ -59,10 +59,17 @@ function on_input(input){
                     $(".p1").empty().append(locations[2]["description"])
                 }else if(user_input === "go east"){ // the moon room
                     current_location = locations[4]["name"];
+                    $(".p1").empty().append(locations[4]["description"])
                 }else if (user_input === "go south"){ // the sun room
                     current_location = locations[5]["name"];
+                    $(".p1").empty().append(locations[5]["description"])
                 }else if(user_input === "go west"){ // the black hole room
-
+                    if(inventory.includes("key")){
+                        current_location = $(".p1").empty().append(locations[6]["name"]);
+                        $(".p1").empty().append(locations[6]["description"])
+                    }else if (inventory.includes("key fragment 1") || inventory.includes("key fragment 2") || inventory.includes("key fragment 3")){
+                        $(".p1").empty().append("You must craft a key in order to open this door")
+                    }
                 }
                 break;
             case "The Star Room":
@@ -70,7 +77,7 @@ function on_input(input){
                 if (user_input === "look around"){
                     $(".p1").empty().append(locations[2]["description"], locations[2]["on_look_around"]);
                 }else if(user_input === "take all" && items_taken[0] === false){ //adds these all to your inventory
-                    inventory.push("Crystalline Spyglass", "Dark Matter Capsule", "Rusty Handgun", "Key Fragment")
+                    inventory.push("Crystalline Spyglass", "Dark Matter Capsule", "Rusty Handgun", "Key Fragment 1")
                     $(".p1").empty().append("You have acquired: The Crystalline Spyglass, the Dark Matter Capsule, the Rusty Handgun and a Key Fragment")
                     items_taken[0] = true;
                 }else if(user_input === "go door"){
@@ -82,24 +89,57 @@ function on_input(input){
                     }
                 }else if (user_input === "go moon room"){
                     current_location = locations[4]["name"]
+                    $(".p1").empty().append(locations[4]["description"])
                 }else if(user_input === "go back"){
                     current_location = locations[1]["name"]
-                    $(".p1").append("You are back in the courtyard")
+                    $(".p1").empty().append("You are back in the courtyard")
                 }
                 break;
             case "The Crafting Room":
-                if(user_input === "take manual"){
+                if(user_input === "take manual" && items_taken[1] === false){
                     $(".p1").append(locations[3]["items"])
-                }else if (user_input === "go back"){
+                    items_taken[1] = true;
+                }else if(user_input === "craft key"){
+
+                    if(inventory.includes("Key Fragment 1") && inventory.includes("Key Fragment 2") && inventory.includes("Key Fragment 3")){
+                        inventory.splice(inventory.indexOf("Key Fragment 1"));inventory.splice(inventory.indexOf("Key Fragment 2"));inventory.splice(inventory.indexOf("Key Fragment 3"));
+                        inventory.push("key");
+                        $(".p1").empty().append("Crafted: The key to the black hole room")
+                    }
+
+
+                } else if (user_input === "go back"){
                     current_location = locations[2]["name"]
                     $(".p1").empty().append(locations[2]["description"]);
                 }
                 break;
             case "The Moon Room":
+                if(user_input === "look around"){
+                    $(".p1").empty().append(locations[4]["on_look_around"])
+                }else if (user_input === "take all" && items_taken[2] === false){
+                    inventory.push("Dark Rock", "Titan Rock", "Key Fragment 2");
+                    items_taken[2] = true;
+                    $(".p1").empty().append("You have acquired: the Dark Rock, the Titan Rock, and a key fragment")
+                }else if (user_input === "go back"){
+                    current_location = locations[1]["name"];
+                    $(".p1").empty().append("You are back in the courtyard")
+                }
                 break;
             case "The Sun Room":
+                if(user_input === "look around"){
+                    $(".p1").empty().append(locations[5]["on_look_around"])
+                }else if(user_input === "take all" && items_taken[3] === false){
+                    inventory.push("Dated Fusion Reactor", "Key Fragment 3");
+                    $(".p1").empty().append("You have acquired: An Old World Fusion Reactor, and a key fragment")
+                    items_taken[3] = true;
+                }else if(user_input === "go back"){
+                    current_location = locations[1]["name"];
+                    $(".p1").empty().append("You are back in the courtyard");
+                }
+
                 break;
             case "The Black Hole Room":
+
                 break;
             case "The Do Not Enter Room":
                 break;
@@ -111,6 +151,7 @@ function on_input(input){
         quit = true;
     }
 }
+
 function play_the_game(){
 
     //fades out all the text on the screen
