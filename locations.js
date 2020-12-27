@@ -26,20 +26,23 @@ let locations = [
             "was peppered with stars, each one individulistic and yet equal. There is a small \n" +
             "brown door at the far end of the room, with a feeble looking lock on it." +
             "To the right, there is a door which leads to the Moon room.\n" +
-            "To the left side, there is a small metal desk with an upturned chair  \n",
+            "To the left side, there is a small metal desk with an upturned chair.   \n",
         requirement: "none",
         on_look_around: "You move to the far side of the room, and turn around. Instantly, you notice three out-of-place objects. A crystalline Spyglass. A Dark Matter Capsule." +
             " \nA small, thumbnail sized metallic fragment of sorts. You move to the metal desk and rummage through the contents of the drawer. Your hands brush away some paper" +
-            ", and there sits a rusty handgun, fully loaded."
+            ", and there sits a rusty handgun, fully loaded.",
+        items: ["Crystalline Spyglass", "Dark Matter Capsule", "Rusty Handgun", "Key Fragment"]
+
 
     },
     { // index 3
         name: "The Crafting Room",
-        description: "You shoot out the lock with the handgun, the recoil of which is horrid and jolts +\n" +
-            " \"your arm. You continue down a very short passage until you reach a small room. +\n" +
-            " \"Inside, there is a large 3D printer, with trays to put the materials inside of.  +\n" +
-            " \"On top of which, there is a manual with all the items you can craft with it.\n",
-        requirement: "rusty handgun",
+        description: "You shoot out the lock with the handgun, the recoil of which is horrid and jolts " +
+            " your arm. You continue down a very short passage until you reach a small room. " +
+            " Inside, there is a large 3D printer, with trays to put the materials inside of." +
+            " On top of which, there is a manual with all the items you can craft with it.",
+        requirement: "You need a handgun to break through this door!",
+        items: "You have acquired: the 3D printing manual. Press 'M', to read it, at any time!"
     },
     {// index 4
         name: "The Moon Room",
