@@ -65,10 +65,12 @@ function on_input(input){
                     $(".p1").empty().append(locations[5]["description"])
                 }else if(user_input === "go west"){ // the black hole room
                     if(inventory.includes("key")){
-                        current_location = $(".p1").empty().append(locations[6]["name"]);
+                        current_location = locations[6]["name"];
                         $(".p1").empty().append(locations[6]["description"])
                     }else if (inventory.includes("key fragment 1") || inventory.includes("key fragment 2") || inventory.includes("key fragment 3")){
                         $(".p1").empty().append("You must craft a key in order to open this door")
+                    }else if(user_input === "look around"){
+                        $(".p1").empty().append(locations[1]["description"])
                     }
                 }
                 break;
@@ -140,8 +142,28 @@ function on_input(input){
                 break;
             case "The Black Hole Room":
 
+                if(user_input === "look around"){
+                    $(".p1").empty().append(locations[6]["on_look_around"]);
+                }else if(user_input === "take all"){
+                    inventory.push("Boring Armour", "Unreadable Note", "Concentrated Dark Matter");
+                    $(".p1").empty().append("You have acquired: Boring Armour, and Concentrated Dark Matter");
+                }else if (user_input === "go door"){
+                    current_location = locations[7]["name"];
+                    $(".p1").empty().append(locations[7]["description"]);
+                }
                 break;
-            case "The Do Not Enter Room":
+            case "The Do Not Enter Room": // NEEDS FIXING
+                if(user_input === "go closer"){
+                    $(".p1").empty().append(locations[7]["on_look_around"])
+                    current_location = locations[6]["name"];
+                    inventory.push("Ionic Fabric")
+                }else if(user_input === "go back"){
+                    current_location = locations[1]["name"]
+                    $(".p1").empty().append("You look down. On your arm, the seeming light dog had left its corpse - " +
+                        "or had left its... fabric. The light dog had been made of... fabric");
+                }else if(user_input === "take all"){
+                    $(".p1").empty().append("You have acquired: Ionic Fabric")
+                }
                 break;
             case "The Mirror Room":
                 break;

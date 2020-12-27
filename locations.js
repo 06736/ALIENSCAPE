@@ -71,28 +71,32 @@ let locations = [
     },
     { // index 6
         name: "The Black Hole Room",
-        description: "You turn the key, and gently push open the door. You are met again with a harsh\n" +
-            "white light. There is a single pedestal in the centre of the room. However, there is \n" +
-            "nothing within the glass. A 'BEEP' emits from your rucksack, and you pull out\n" +
-            "the source; the dark matter capsule. A message is being displayed on the \n" +
-            "screen: 'DARK MATTER NEARBY - PRESS HERE TO\n" +
-            "COLLECT'. You press the button, the glass pedestal crashes and - silence.\n" +
-            "The collector is also much heavier now. Another prompt shows up on the screen:\n" +
-            "'PRESS HERE TO CONCENTRATE'. You press again, and instantaneously, \n" +
+        description: "You turn the key, and gently push open the door. You are met again with a harsh" +
+            "white light. There is a single pedestal in the centre of the room. However, there is " +
+            "nothing within the glass. A 'BEEP' emits from your rucksack, and you pull out" +
+            "the source; the dark matter capsule. A message is being displayed on the " +
+            "screen: 'DARK MATTER NEARBY - PRESS HERE TO" +
+            "COLLECT'. You press the button, the glass pedestal crashes and - silence." +
+            "The collector is also much heavier now. Another prompt shows up on the screen:" +
+            "'PRESS HERE TO CONCENTRATE'. You press again, and instantaneously," +
             "a small black ball is in the middle of the capsule. " ,
-        on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'",
+        on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly" +
+            "adjacent, there is an armour stand, and upon it was what can only be described as the most boring suit of armour" +
+            "you have ever seen. It was grey and dull and boring, however seemingly solidly built.",
         requirement: "black key",
     },
     { // index 7
         name: "Do Not Enter Room",
-        description: "You enter the room. You are met with silence, then... a distant humming\n" +
-            "You walk down the corridor, handgun out, then reach a clearing. In the center\n" +
-            "of the room, there is a small cube on the floor. You approach. It begins to shake,\n" +
-            "then a hatch opens on it. A small being, made purely of blue light-or so it seemed-\n" +
-            "popped out. It looks closely at you. Then it quadroupled in size, screeched, and \n" +
-            "charged at you. It leaps, and bites onto your arm. With your other hand, you grab\n" +
-            "your gun from the holster and shoot it, once to the head. Instantly, the blue light \n" +
-            "dies down. You glimpse at the box. It begins to hum again. You run",
+        description: "You enter the room. You are met with silence, then... a distant humming" +
+            "You walk down the corridor, handgun out, then reach a clearing. In the center" +
+            "of the room, there is a small cube on the floor.",
+        on_look_around: "You approach. It begins to shake," +
+        "then a hatch opens on it. A small being, made purely of blue light-or so it seemed-" +
+                "popped out. It looks closely at you. Then it quadroupled in size, screeched, and " +
+            "charged at you. It leaps, and bites onto your arm. With your other hand, you grab" +
+            "your gun from the holster and shoot it, once to the head. Instantly, the blue light " +
+            "dies down. You glimpse at the box. It begins to hum again. You run. Once back through the door," +
+            "you break the handle. You won't be going back in there again.",
         requirement: "in the black hole room"
     },
     { // index 8
