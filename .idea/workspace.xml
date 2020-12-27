@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="working input, thanks to the legend Tom Steer">
-      <change afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="created a new js sheet for the locations. man its like alpha stages right now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Websites/mugWebsite" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
@@ -88,7 +89,9 @@
       <workItem from="1607707628322" duration="10476000" />
       <workItem from="1607789184370" duration="6890000" />
       <workItem from="1607872526089" duration="2956000" />
-      <workItem from="1609002326949" duration="4165000" />
+      <workItem from="1609002326949" duration="5015000" />
+      <workItem from="1609061759708" duration="683000" />
+      <workItem from="1609072719666" duration="8282000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -139,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607873625846</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="created a new js sheet for the locations. man its like alpha stages right now">
+      <created>1609016812120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609016812120</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +174,8 @@
     <MESSAGE value="Has working main menu button" />
     <MESSAGE value="input shows but nothing is assigned" />
     <MESSAGE value="working input, thanks to the legend Tom Steer" />
-    <option name="LAST_COMMIT_MESSAGE" value="working input, thanks to the legend Tom Steer" />
+    <MESSAGE value="created a new js sheet for the locations. man its like alpha stages right now" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a new js sheet for the locations. man its like alpha stages right now" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
@@ -183,6 +194,10 @@
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
     <state x="-1230" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607631638441" />
+    <state x="-1180" y="226" key="FileChooserDialogImpl" timestamp="1609061953523">
+      <screen x="-1920" y="-109" width="1920" height="1160" />
+    </state>
+    <state x="-1180" y="226" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1609061953523" />
     <state x="-1088" y="369" key="Github.ShareDialog" timestamp="1607630343809">
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
@@ -199,18 +214,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607540462249" />
-    <state x="-1368" y="144" key="Vcs.Push.Dialog.v2" timestamp="1607872786621">
-      <screen x="-1920" y="-109" width="1920" height="1160" />
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609016825364">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607872786621" />
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609016825364" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607536438504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607536438504" />
-    <state x="-1143" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607873535045">
-      <screen x="-1920" y="-109" width="1920" height="1160" />
+    <state x="777" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609016676197">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607873535045" />
+    <state x="777" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609016676197" />
     <state x="-1784" y="220" key="run.anything.popup" timestamp="1607719117588">
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
