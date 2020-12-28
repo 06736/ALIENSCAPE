@@ -69,12 +69,12 @@ function on_input(input){
                     if(inventory.includes("key")){
                         current_location = locations[6]["name"];
                         $(".p1").empty().append(locations[6]["description"])
-                    }else if (inventory.includes("key fragment 1") || inventory.includes("key fragment 2") || inventory.includes("key fragment 3")){
+                    }else if (!inventory.includes("key")){
                         $(".p1").empty().append("You must craft a key in order to open this door")
-                    }else if(user_input === "look around"){
-                        $(".p1").empty().append(locations[1]["description"])
                     }
-                }else if(user_input === "go down"){
+                }else if(user_input === "look around"){
+                    $(".p1").empty().append(locations[1]["description"])
+                } else if(user_input === "go down"){
                     if(inventory.includes("Ion-Reactor Armour")){
                         current_location = locations[8]["name"];
                         $(".p1").empty().append(locations[8]["description"])

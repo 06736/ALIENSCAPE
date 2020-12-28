@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="Bugs on the do not enter room and possibly a few other places, polish required all over">
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <workItem from="1609061759708" duration="683000" />
       <workItem from="1609072719666" duration="8340000" />
       <workItem from="1609088086001" duration="14027000" />
-      <workItem from="1609149401717" duration="4220000" />
+      <workItem from="1609149401717" duration="4790000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -180,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609103493423</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="pre-alpha 1.0">
+      <created>1609153850347</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609153850347</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +215,8 @@
     <MESSAGE value="Working for the north door only. For next time: make it so that different description if you have already visited the room" />
     <MESSAGE value="everything is interactive until you reach the black hole room" />
     <MESSAGE value="Bugs on the do not enter room and possibly a few other places, polish required all over" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugs on the do not enter room and possibly a few other places, polish required all over" />
+    <MESSAGE value="pre-alpha 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
@@ -249,11 +255,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607540462249" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609103496751">
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609153858340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607872786621" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609103496751" />
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609153858340" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607536438504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
