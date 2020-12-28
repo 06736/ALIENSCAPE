@@ -3,12 +3,17 @@ let locations = [
         name: "courtyard initial",
         description: "Slowly, you open your eyes. You are in the middle of a courtyard, enclosed between four ancient dusty walls." +
             "You look around. Everything around you is decayed and rotten, as if it had only died very recently. The entire courtyard stinks of " +
-            "midlew. Upon closer inspection, you notice that the cobblestone underfoot has been cracked, like there had been a recent impact."
+            "midlew. Upon closer inspection, you notice that the cobblestone underfoot has been cracked, like there had been a recent impact.",
+        items: []
+
 
     },
     {//index 1
         name: "Courtyard",
-        description: "Everything around you seems to have died recently. Every weed, patch of grass \n" +
+        description: "Slowly, you open your eyes. You are in the middle of a courtyard, enclosed between four ancient dusty walls." +
+            "You look around. Everything around you is decayed and rotten, as if it had only died very recently. The entire courtyard stinks of " +
+            "midlew. Upon closer inspection, you notice that the cobblestone underfoot has been cracked, like there had been a recent impact.",
+        on_look_around: "Everything around you seems to have died recently. Every weed, patch of grass \n" +
             "and vein of ivy is now rotten and decaying, as if it had been alive recently.\n" +
             "The entire courtyard stinks of mildew, a closer look at the cobble underfoot\n" +
             "shows it to be completely cracked, like there has been a recent impact\n" +
@@ -17,7 +22,9 @@ let locations = [
             "South there is a door with a sun crest atop it,\n" +
             "And west there is a door with a black hole atop it.\n" +
             "and directly beneath your feet, there is a trapdoor, which you cannot open...",
-        requirement: "none"
+        requirement: "none",
+        items: ["Small Rucksack", "Ionic Fabric"],
+        taken: [false, false]
 
     },
     {//index 2
@@ -31,7 +38,9 @@ let locations = [
         on_look_around: "You move to the far side of the room, and turn around. Instantly, you notice three out-of-place objects. A crystalline Spyglass. A Dark Matter Capsule." +
             " \nA small, thumbnail sized metallic fragment of sorts. You move to the metal desk and rummage through the contents of the drawer. Your hands brush away some paper" +
             ", and there sits a rusty handgun, fully loaded.",
-        items: ["Crystalline Spyglass", "Dark Matter Capsule", "Rusty Handgun", "Key Fragment"]
+        items: ["handgun","spyglass", "dark matter capsule",  "key fragment"],
+        taken: [false, false, false, false]
+
 
 
     },
@@ -43,7 +52,8 @@ let locations = [
             " On top of which, there is a manual with all the items you can craft with it. To craft anything," +
             "just enter 'craft' + the name of the item you want to craft whilst within this room",
         requirement: "You need a handgun to break through this door!",
-        items: "You have acquired: the 3D printing manual. Press 'M', to read it, at any time!"
+        items: ["manual"],
+        taken: [false]
     },
     {// index 4
         name: "The Moon Room",
@@ -60,6 +70,8 @@ let locations = [
             "The rock here was a deep shade of black. You put your head closer." +
             "The rock is covered in pinpricks of pulsating, purple light",
         requirement: "none",
+        items: ["moon rock", "titan rock", "key fragment"],
+        taken: [false, false, false]
     },
     { // index 5
         name: "The Sun Room",
@@ -68,6 +80,8 @@ let locations = [
             "which states 'Power On'. You decide not to click it due to how rusty it looks.",
         on_look_around: "",
         requirement: "none",
+        items: ["fusion reactor", "key fragment"],
+        taken: [false, false]
     },
     { // index 6
         name: "The Black Hole Room",
@@ -83,7 +97,8 @@ let locations = [
         on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly " +
             "adjacent, there is an armour stand, and upon it was what can only be described as the most boring suit of armour" +
             "you have ever seen. It was grey and dull and boring, however seemingly solidly built.",
-        requirement: "black key",
+        items: ["concentrated dark matter"],
+        taken: [false]
     },
     { // index 7
         name: "The Do Not Enter Room",
@@ -97,7 +112,8 @@ let locations = [
             "your gun from the holster and shoot it, once to the head. Instantly, the blue light " +
             "dies down. You glimpse at the box. It begins to hum again. You run. Once back through the door," +
             "you break the handle. You won't be going back in there again.",
-        requirement: "in the black hole room"
+        requirement: "in the black hole room",
+        items: []
     },
     { // index 8
         name: "The Mirror Room",
@@ -105,6 +121,7 @@ let locations = [
             "creaks so loudly. Once fully descended, a light switches on, and all you can see\n" +
             "is a big mirror. You take a glimpse of yourself, and remember everything.\n",
         requirement: "a set of armour",
+        items: []
     },
     {
             }
