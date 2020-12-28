@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="everything is interactive until you reach the black hole room">
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="Bugs on the do not enter room and possibly a few other places, polish required all over">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -90,7 +93,8 @@
       <workItem from="1609002326949" duration="5015000" />
       <workItem from="1609061759708" duration="683000" />
       <workItem from="1609072719666" duration="8340000" />
-      <workItem from="1609088086001" duration="13294000" />
+      <workItem from="1609088086001" duration="14027000" />
+      <workItem from="1609149401717" duration="4220000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -169,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609101505187</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Bugs on the do not enter room and possibly a few other places, polish required all over">
+      <created>1609103493423</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609103493423</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +209,8 @@
     <MESSAGE value="works for more stages however possibility that not more than one input can be taken per room, will fix next patch" />
     <MESSAGE value="Working for the north door only. For next time: make it so that different description if you have already visited the room" />
     <MESSAGE value="everything is interactive until you reach the black hole room" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything is interactive until you reach the black hole room" />
+    <MESSAGE value="Bugs on the do not enter room and possibly a few other places, polish required all over" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugs on the do not enter room and possibly a few other places, polish required all over" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
@@ -237,11 +249,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607540462249" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609083654197">
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609103496751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607872786621" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609083654197" />
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609103496751" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607536438504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,9 +267,9 @@
       <screen x="-1920" y="-109" width="1920" height="1160" />
     </state>
     <state x="-1784" y="220" key="run.anything.popup/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607719117588" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609095339885">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609152312279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609095339885" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609152312279" />
   </component>
 </project>

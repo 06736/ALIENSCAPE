@@ -1,6 +1,7 @@
 //sets the current location
 let current_location = "courtyard initial";
 let inventory = [];
+let have_visited = false;
 //                 star    craft  moon   sun   black  dont  mirror
 let items_taken = [false, false, false, false, false,false,false];
 function main_menu() {
@@ -43,6 +44,7 @@ function on_input(input){
     //will run until the user types "quit"
     let quit = false;
     while(quit === false) {
+        console.log(inventory);
         let user_input = $("input").val().toLowerCase();
         $(input).val("");
         switch (current_location){
@@ -72,6 +74,17 @@ function on_input(input){
                     }else if(user_input === "look around"){
                         $(".p1").empty().append(locations[1]["description"])
                     }
+                }else if(user_input === "go down"){
+                    if(inventory.includes("Ion-Reactor Armour")){
+                        current_location = locations[8]["name"];
+                        $(".p1").empty().append(locations[8]["description"])
+                    }
+                }
+                else if (user_input === "take all" && have_visited === true){
+                    inventory.push("Ionic Fabric")
+                    $(".p1").empty().append("You look down. On your arm, the seeming light dog had left its corpse - " +
+                        "or had left its... fabric. The light dog had been made of... fabric." +
+                        "You have acquired: Ionic Fabric");
                 }
                 break;
             case "The Star Room":
@@ -98,19 +111,27 @@ function on_input(input){
                 }
                 break;
             case "The Crafting Room":
-                if(user_input === "take manual" && items_taken[1] === false){
-                    $(".p1").append(locations[3]["items"])
+                if(user_input === "take all" && items_taken[1] === false){
+                    $(".p1").empty().append(locations[3]["items"])
+                    inventory.push("3D Printing Manual")
                     items_taken[1] = true;
                 }else if(user_input === "craft key"){
 
                     if(inventory.includes("Key Fragment 1") && inventory.includes("Key Fragment 2") && inventory.includes("Key Fragment 3")){
-                        inventory.splice(inventory.indexOf("Key Fragment 1"));inventory.splice(inventory.indexOf("Key Fragment 2"));inventory.splice(inventory.indexOf("Key Fragment 3"));
+                        inventory.splice(inventory.indexOf("Key Fragment 1"), inventory.indexOf("Key Fragment 1")+1);inventory.splice(inventory.indexOf("Key Fragment 2"), inventory.indexOf("Key Fragment 2")+1);inventory.splice(inventory.indexOf("Key Fragment 3"), inventory.indexOf("Key Fragment 3")+1);
                         inventory.push("key");
-                        $(".p1").empty().append("Crafted: The key to the black hole room")
+                        $(".p1").empty().append("Crafted: An Ancient Key")
                     }
 
 
-                } else if (user_input === "go back"){
+                }else if (user_input === "craft armour"){
+                    if(inventory.includes("Dated Fusion Reactor") && inventory.includes("Boring Armour") && inventory.includes("Ionic Fabric")){
+                        inventory.splice(inventory.indexOf("Dated Fusion Reactor"), inventory.indexOf("Dated Fusion Reactor")+1);inventory.splice(inventory.indexOf("Boring Armour"), inventory.indexOf("Boring Armour")+1);inventory.splice(inventory.indexOf("Ionic Fabric"), inventory.indexOf("Ionic Fabric")+1);
+                        inventory.push("Ion-Reactor Armour");
+                        $(".p1").empty().append("Crafted: Ion-Reactor Armour")
+                    }
+                }
+                else if (user_input === "go back"){
                     current_location = locations[2]["name"]
                     $(".p1").empty().append(locations[2]["description"]);
                 }
@@ -144,25 +165,29 @@ function on_input(input){
 
                 if(user_input === "look around"){
                     $(".p1").empty().append(locations[6]["on_look_around"]);
-                }else if(user_input === "take all"){
+                }else if(user_input === "take all" && items_taken[4] === false){
                     inventory.push("Boring Armour", "Unreadable Note", "Concentrated Dark Matter");
+                    items_taken[4] = true;
                     $(".p1").empty().append("You have acquired: Boring Armour, and Concentrated Dark Matter");
                 }else if (user_input === "go door"){
-                    current_location = locations[7]["name"];
-                    $(".p1").empty().append(locations[7]["description"]);
+                    if(have_visited === false) {
+                        $(".p1").empty().append(locations[7]["description"]);
+                        current_location = locations[7]["name"];
+                    }else{
+                        $(".p1").empty().append("You broke the handle, so cannot re-enter this room!")
+                    }
+                }else if (user_input === "go back"){
+                    current_location = locations[1]["name"];
+                    $(".p1").empty().append("You are back in the courtyard")
+                    $(".p3").append(current_location)
                 }
                 break;
             case "The Do Not Enter Room": // NEEDS FIXING
-                if(user_input === "go closer"){
+                if(user_input === "go closer") {
+                    have_visited = true;
                     $(".p1").empty().append(locations[7]["on_look_around"])
                     current_location = locations[6]["name"];
-                    inventory.push("Ionic Fabric")
-                }else if(user_input === "go back"){
-                    current_location = locations[1]["name"]
-                    $(".p1").empty().append("You look down. On your arm, the seeming light dog had left its corpse - " +
-                        "or had left its... fabric. The light dog had been made of... fabric");
-                }else if(user_input === "take all"){
-                    $(".p1").empty().append("You have acquired: Ionic Fabric")
+
                 }
                 break;
             case "The Mirror Room":

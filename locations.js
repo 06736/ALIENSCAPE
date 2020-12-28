@@ -79,16 +79,16 @@ let locations = [
             "COLLECT'. You press the button, the glass pedestal crashes and - silence." +
             "The collector is also much heavier now. Another prompt shows up on the screen:" +
             "'PRESS HERE TO CONCENTRATE'. You press again, and instantaneously," +
-            "a small black ball is in the middle of the capsule. " ,
-        on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly" +
+            "a small black ball appears in the middle of the capsule. " ,
+        on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly " +
             "adjacent, there is an armour stand, and upon it was what can only be described as the most boring suit of armour" +
             "you have ever seen. It was grey and dull and boring, however seemingly solidly built.",
         requirement: "black key",
     },
     { // index 7
-        name: "Do Not Enter Room",
-        description: "You enter the room. You are met with silence, then... a distant humming" +
-            "You walk down the corridor, handgun out, then reach a clearing. In the center" +
+        name: "The Do Not Enter Room",
+        description: "You enter the room. You are met with silence, then... a distant humming. " +
+            "You walk down the corridor, handgun out, then reach a clearing. In the center " +
             "of the room, there is a small cube on the floor.",
         on_look_around: "You approach. It begins to shake," +
         "then a hatch opens on it. A small being, made purely of blue light-or so it seemed-" +
