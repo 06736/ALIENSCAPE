@@ -1,10 +1,9 @@
 //sets the current location
 let current_location = "Tutorial";
-let inventory = [];
-let have_visited = [false, false];
-
-//                 rucksack  gun   spyglass dmc    k.f
-let items_taken = [false,    false, false, false, false,false,false];
+let inventory = ["key"];
+let have_visited = [false, false, false];
+let current_objective = "Break into the Crafting Room";
+let objective_check = [false, false, false]
 function main_menu() {
     $(document).ready(function () {
         $(".h1").fadeOut("2000", function () {
@@ -48,7 +47,8 @@ function on_input(input){
     while(quit === false) {
         let user_input = $("input").val().toLowerCase();
         $(input).val("");
-
+        $("#objective").empty().append(current_objective);
+        console.log(current_objective + "Hi")
         switch (current_location){
             case "Tutorial":
                 location_index = 0
@@ -81,7 +81,7 @@ function on_input(input){
                     current_location = locations[5]["name"];
                     $(".p1").empty().append(locations[5]["description"])
                 }else if(user_input === "go west"){ // the black hole room
-                    if(inventory.includes("key")){
+                    if(inventory.includes("key") || have_visited[2] === true){
                         current_location = locations[6]["name"];
                         $(".p1").empty().append(locations[6]["description"])
                     }else if (!inventory.includes("key")){
@@ -90,9 +90,13 @@ function on_input(input){
                 }else if(user_input === "look around"){
                     $(".p1").empty().append(locations[1]["on_look_around"])
                 } else if(user_input === "go down"){
-                    if(inventory.includes("Ion-Reactor Armour")){
+                    if(inventory.includes("ionic armour")){
                         current_location = locations[8]["name"];
                         $(".p1").empty().append(locations[8]["description"])
+                    }else if(inventory.includes("armour")){
+                        $(".p1").empty().append("You are still not strong enough. Try to upgrade your armour in the crafting room!");
+                    }else{
+                        $(".p1").empty().append("You are not strong enough to open the overgrown trapdoor. Try using a set of armour to increase your strength.")
                     }
                 } else if (user_input.substring(0,4) === "take"){
                     take(user_input, current_location, location_index);
@@ -107,7 +111,7 @@ function on_input(input){
                     $(".p1").empty().append(locations[2]["on_look_around"]);
                 }else if(user_input.substring(0,4) === "take"){ //adds these all to your inventory
                     take(user_input, current_location, location_index);
-                }else if(user_input === "go door"){
+                }else if(user_input === "go crafting room"){
                     if(inventory.includes("handgun")){
                         current_location = locations[3]["name"];
                         $(".p1").empty().append(locations[3]["description"]);
@@ -131,6 +135,7 @@ function on_input(input){
                 break;
             case "The Crafting Room":
                 location_index = 3;
+                current_objective = "Enter the Black Hole Room"
                 if(user_input.substring(0,4) === "take"){
                     take(user_input, current_location, location_index);
                 }else if(user_input === "craft key"){
@@ -140,7 +145,7 @@ function on_input(input){
                         $(".p1").empty().append("Crafted: An Ancient Key")
                     }
                 }else if (user_input === "craft armour"){
-                    if(inventory.includes("fusion reactor") && inventory.includes("boring armour") && inventory.includes("ionic fabric")){
+                    if(inventory.includes("fusion reactor") && inventory.includes("armour") && inventory.includes("ionic fabric")){
                         inventory.splice(0, inventory.length);
                         inventory.push("ionic armour");
                         $(".p1").empty().append("Crafted: Ionic Armour")
@@ -181,6 +186,8 @@ function on_input(input){
 
                 break;
             case "The Black Hole Room":
+                have_visited[2] = true;
+                current_objective = "Descend through the trapdoor..."
                 location_index = 6;
                 if(user_input === "look around"){
                     $(".p1").empty().append(locations[6]["on_look_around"]);
@@ -211,7 +218,20 @@ function on_input(input){
                 }
                 break;
             case "The Mirror Room":
+                location_index = 8;
+                objective_check[2] = true;
                 break;
+        }
+        if(have_visited[1] === true){
+            if(user_input === "take ionic fabric"){
+                $(".p1").empty().append("Acquired: Ionic Fabric");
+                inventory.push("ionic fabric")
+            }
+        }
+        if(user_input === "read manual"){
+            if(inventory.includes("manual")){
+                $(".p1").empty().append("CRAFTING RECIPES: 3 KEY FRAGMENTS = KEY | IONIC FABRIC + FUSION REACTOR + ARMOUR = IONIC ARMOUR")
+            }
         }
         $("#inventory_1").empty().append(inventory[0])
         $("#inventory_2").empty().append(inventory[1])

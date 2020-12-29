@@ -6,7 +6,7 @@ let locations = [
         on_go_north: "You enter a room, which looks strangely familiar. Oh yes, it's where you work. Now type 'look around'",
         on_look_around: "You notice a water bottle on the floor. Try typing 'take water bottle'",
         on_take: "Acquired: water bottle. Finally, enter 'drop water bottle'",
-        on_drop: "Dropped: water bottle. Ah, you might want to clean that up... Anyways, I'll let you get to it. Best of luck! Press enter (or any sequence of characters followed with an enter) to start!",
+        on_drop: "Dropped: water bottle. Ah, you might want to clean that up... One final command you will have to use - a lot - is 'go back', so that you can leave the room you are in and go to the previous one. Anyways, I'll let you get to it. Best of luck! Press enter (or any sequence of characters followed with an enter) to start!",
         items: [],
         taken: []
 
@@ -27,21 +27,21 @@ let locations = [
             "And west there is a door with a black hole atop it.\n" +
             "and directly beneath your feet, there is a trapdoor, which you cannot open...",
         requirement: "none",
-        items: ["Small Rucksack", "Ionic Fabric"],
-        taken: [false, false]
+        items: [],
+        taken: []
 
     },
     {//index 2
         name: "The Star Room",
         description:"You open the doors. Inside, you are met with a small circular room. The ceiling\n" +
             "was peppered with stars, each one individulistic and yet equal. There is a small \n" +
-            "brown door at the far end of the room, with a feeble looking lock on it." +
-            "To the right, there is a door which leads to the Moon room.\n" +
+            "brown door at the far end of the room, with a feeble looking lock on it. The label on the door reads 'The Crafting Room'." +
+            "To the right, there is another door which leads to the Moon room.\n" +
             "To the left side, there is a small metal desk with an upturned chair.   \n",
         requirement: "none",
-        on_look_around: "You move to the far side of the room, and turn around. Instantly, you notice three out-of-place objects. A crystalline Spyglass. A Dark Matter Capsule." +
-            " \nA small, thumbnail sized metallic fragment of sorts. You move to the metal desk and rummage through the contents of the drawer. Your hands brush away some paper" +
-            ", and there sits a rusty handgun, fully loaded.",
+        on_look_around: "You move to the far side of the room, and turn around. Instantly, you notice three out-of-place objects. A Spyglass. A Dark Matter Capsule." +
+            " \nAnd small key fragment. You move to the metal desk and rummage through the contents of the drawer. Your hands brush away some paper" +
+            ", and there sits a handgun, fully loaded.",
         items: ["handgun","spyglass", "dark matter capsule",  "key fragment"],
         taken: [false, false, false, false]
 
@@ -52,9 +52,9 @@ let locations = [
         name: "The Crafting Room",
         description: "You shoot out the lock with the handgun, the recoil of which is horrid and jolts " +
             " your arm. You continue down a very short passage until you reach a small room. " +
-            " Inside, there is a large 3D printer, with trays to put the materials inside of." +
-            " On top of which, there is a manual with all the items you can craft with it. To craft anything," +
-            "just enter 'craft' + the name of the item you want to craft whilst within this room",
+            " Inside, there is a large 3D printer, with trays to put the materials inside of. On top of which, there is a small manual. If it is in your inventory, you can type" +
+            " 'read manual' to view the crafting recipes!" +
+            " To craft anything, just enter 'craft' + the name of the item you want to craft whilst within this room",
         requirement: "You need a handgun to break through this door!",
         items: ["manual"],
         taken: [false]
@@ -101,7 +101,7 @@ let locations = [
         on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly " +
             "adjacent, there is an armour stand, and upon it was what can only be described as the most boring suit of armour" +
             "you have ever seen. It was grey and dull and boring, however seemingly solidly built.",
-        items: ["concentrated dark matter", "boring armour"],
+        items: ["concentrated dark matter", "armour"],
         taken: [false, false]
     },
     { // index 7
