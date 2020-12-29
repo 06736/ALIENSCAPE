@@ -22,11 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.1&#10;got these rlly cool boxes now!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.11&#10;has a tutorial&#10;will smooth the story then beta release!">
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <workItem from="1609186647204" duration="2028000" />
       <workItem from="1609188876518" duration="3116000" />
       <workItem from="1609192071394" duration="251000" />
-      <workItem from="1609234069673" duration="10673000" />
+      <workItem from="1609234069673" duration="11033000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609247881154</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="pre-alpha 1.11&#10;has a tutorial&#10;will smooth the story then beta release!">
+      <created>1609252735036</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609252735036</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +267,8 @@
     <MESSAGE value="pre-alpha 1.03&#10;inventory addition + removal works." />
     <MESSAGE value="pre-alpha 1.031&#10;fixed crafting for now, in future possibility of a function?" />
     <MESSAGE value="pre-alpha 1.1&#10;got these rlly cool boxes now!" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.1&#10;got these rlly cool boxes now!" />
+    <MESSAGE value="pre-alpha 1.11&#10;has a tutorial&#10;will smooth the story then beta release!" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.11&#10;has a tutorial&#10;will smooth the story then beta release!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
@@ -302,11 +307,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1607540462249" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609247889855">
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2" timestamp="1609252738310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="144" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@-1920.-109.1920.1160" timestamp="1607872786621" />
-    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609247889855" />
+    <state x="552" y="227" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-109.1920.1160@0.0.1920.1040" timestamp="1609252738310" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607536438504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

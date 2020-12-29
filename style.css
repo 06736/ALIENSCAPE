@@ -92,6 +92,7 @@ input[type="text"] {
     height: 100px;
     color: white;
     left: 100px;
+    border-radius: 10px;
 
 }
 #current_location_div{
@@ -106,4 +107,5 @@ input[type="text"] {
     height: 100px;
     color: white;
     right: 100px;
+    border-radius: 10px;
 }
