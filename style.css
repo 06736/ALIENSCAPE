@@ -16,8 +16,9 @@ body{
     padding: 50px;
     display:flex;
     position: relative;
-
     justify-content:center;
+    left:50%;
+    transform:translate(-50%,0%);
 
 }
 .p1{
@@ -25,7 +26,6 @@ body{
     margin:auto;
     padding: 50px;
     display:flex;
-
     justify-content:center;
 
 }
@@ -93,6 +93,7 @@ input[type="text"] {
     color: white;
     left: 100px;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
 
 }
 #current_location_div{
@@ -108,6 +109,7 @@ input[type="text"] {
     color: white;
     right: 100px;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
 }
 #objective_div{
     border-style: solid;
@@ -120,6 +122,8 @@ input[type="text"] {
     width: 200px;
     height: 100px;
     color: white;
-    right: 850px;
+    left: 50%;
+    transform:translate(-50%,0%);
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
 }
