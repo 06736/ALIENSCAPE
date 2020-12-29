@@ -1,5 +1,5 @@
 //sets the current location
-let current_location = "Courtyard";
+let current_location = "Tutorial";
 let inventory = [];
 let have_visited = [false, false];
 
@@ -30,18 +30,10 @@ function new_input(){
     document.getElementById("input_div").appendChild(input);
 }
 //finds the current location and gives the visual cue depending on
-function new_p(){
-    let p = document.createElement("P")
-    p.setAttribute("id", "p2")
-    document.get.appendChild(p);
-}
 
+function tutorial(){
 
-
-
-function courtyard_initial(){
-    $(".p1").append(locations[1]["description"]).fadeIn("normal");
-
+    $(".p1").append(locations[0]["description"]).fadeIn("normal");
     new_input();
 
 
@@ -54,13 +46,31 @@ function on_input(input){
     let quit = false;
 
     while(quit === false) {
-        console.log(locations[1]["items"]);console.log(locations[1]["taken"])
         let user_input = $("input").val().toLowerCase();
         $(input).val("");
 
         switch (current_location){
+            case "Tutorial":
+                location_index = 0
+                if(user_input === "continue"){
+                    $(".p1").empty().append(locations[0]["on_continue"])
+                }else if(user_input === "go north"){
+                    $(".p1").empty().append(locations[0]["on_go_north"])
+                }else if(user_input === "look around"){
+                    $(".p1").empty().append(locations[0]["on_look_around"])
+                }else if(user_input=== "take water bottle"){
+                    $(".p1").empty().append(locations[0]["on_take"])
+                }else if(user_input === "drop water bottle"){
+                    $(".p1").empty().append(locations[0]["on_drop"])
+                    current_location = locations[1]["name"];
+                }else if(user_input === "skip"){
+                    current_location = locations[1]["name"]
+                    $(".p1").empty().append(locations[1]["description"]).fadeIn("normal");
+                }
+                break;
             case "Courtyard":
                 location_index = 1;
+
                 if (user_input === "go north"){ // the star room
                     current_location = locations[2]["name"];
                     $(".p1").empty().append(locations[2]["description"])
@@ -86,8 +96,9 @@ function on_input(input){
                     }
                 } else if (user_input.substring(0,4) === "take"){
                     take(user_input, current_location, location_index);
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
+                    console.log(user_input.substring(0, 4))
                 }
                 break;
             case "The Star Room":
@@ -114,7 +125,7 @@ function on_input(input){
                 }else if(user_input === "go back"){
                     current_location = locations[1]["name"]
                     $(".p1").empty().append("You are back in the courtyard")
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                 }
                 break;
@@ -134,7 +145,7 @@ function on_input(input){
                         inventory.push("ionic armour");
                         $(".p1").empty().append("Crafted: Ionic Armour")
                     }
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                 }
                 else if (user_input === "go back"){
@@ -151,7 +162,7 @@ function on_input(input){
                 }else if (user_input === "go back"){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard")
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                 }
                 break;
@@ -164,7 +175,7 @@ function on_input(input){
                 }else if(user_input === "go back"){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard");
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                 }
 
@@ -186,7 +197,7 @@ function on_input(input){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard")
                     $(".p3").append(current_location)
-                }else if(user_input.substring(0, 6) === "remove"){
+                }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                 }
                 break;
@@ -234,7 +245,7 @@ function take(user_input, current_location, location_index){
     }
 }
 function remove(user_input, current_location, location_index){ //drops the item but cannot be picked back up...
-    let item_in_focus = user_input.substring(7, user_input.length);
+    let item_in_focus = user_input.substring(5, user_input.length);
     console.log(item_in_focus)
     if(inventory.includes(item_in_focus)){
         console.log(inventory + "before")
@@ -243,9 +254,7 @@ function remove(user_input, current_location, location_index){ //drops the item 
         for(let i = 0; i < 8; i++){
             for(let j = 0; j < locations[i]["items"].length; j++){
                 if(locations[i]["items"][j].includes(item_in_focus)){
-                    //console.log(locations[i]["items"] + " before")
                     locations[i]["items"].splice(j, j+1); //effectively drops the item where you are standing
-                    //console.log(locations[i]["items"] + " after")
                     locations[i]["taken"].splice(j, j+1);
                     locations[location_index]["items"].push(item_in_focus);
                     locations[location_index]["taken"].push(false);
@@ -265,7 +274,7 @@ function play_the_game(){
     //fades out all the text on the screen
 
     main_menu();
-    setTimeout("courtyard_initial()", 2000)
+    setTimeout("tutorial()", 2000)
 
 
 

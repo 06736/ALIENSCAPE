@@ -1,10 +1,14 @@
 let locations = [
     {//index 0
-        name: "courtyard initial",
-        description: "Slowly, you open your eyes. You are in the middle of a courtyard, enclosed between four ancient dusty walls." +
-            "You look around. Everything around you is decayed and rotten, as if it had only died very recently. The entire courtyard stinks of " +
-            "midlew. Upon closer inspection, you notice that the cobblestone underfoot has been cracked, like there had been a recent impact.",
-        items: []
+        name: "Tutorial",
+        description: "You are about to enter the tutorial. Type 'skip' into the box at any time to skip. If you would like to continue with the tutorial, type 'continue' into the box.",
+        on_continue: "Wow, somebody actually using the tutorial! For the first command, type into the box 'go north'",
+        on_go_north: "You enter a room, which looks strangely familiar. Oh yes, it's where you work. Now type 'look around'",
+        on_look_around: "You notice a water bottle on the floor. Try typing 'take water bottle'",
+        on_take: "Acquired: water bottle. Finally, enter 'drop water bottle'",
+        on_drop: "Dropped: water bottle. Ah, you might want to clean that up... Anyways, I'll let you get to it. Best of luck! Press enter (or any sequence of characters followed with an enter) to start!",
+        items: [],
+        taken: []
 
 
     },
