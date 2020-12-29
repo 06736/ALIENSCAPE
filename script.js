@@ -1,7 +1,7 @@
 //sets the current location
 let current_location = "Courtyard";
 let inventory = [];
-let have_visited = false;
+let have_visited = [false, false];
 //                 rucksack  gun   spyglass dmc    k.f
 let items_taken = [false,    false, false, false, false,false,false];
 function main_menu() {
@@ -74,12 +74,8 @@ function on_input(input){
                         current_location = locations[8]["name"];
                         $(".p1").empty().append(locations[8]["description"])
                     }
-                }
-                else if (user_input === "take all" && have_visited === true){
-                    inventory.push("Ionic Fabric")
-                    $(".p1").empty().append("You look down. On your arm, the seeming light dog had left its corpse - " +
-                        "or had left its... fabric. The light dog had been made of... fabric." +
-                        "You have acquired: Ionic Fabric");
+                } else if (user_input.substring(0,4) === "take"){
+                    take(user_input, current_location, location_index);
                 }else if(user_input.substring(0, 6) === "remove"){
                     remove(user_input, current_location, location_index)
                 }
@@ -94,7 +90,11 @@ function on_input(input){
                     if(inventory.includes("handgun")){
                         current_location = locations[3]["name"];
                         $(".p1").empty().append(locations[3]["description"]);
-                    }else{
+                    }else if(have_visited[0] === true){
+                        current_location = locations[3]["name"];
+                        $(".p1").empty().append("You are now in the crafting Room")
+                    }
+                    else{
                         $(".p1").empty().append(locations[3]["requirement"])
                     }
                 }else if (user_input === "go moon room"){
@@ -103,6 +103,8 @@ function on_input(input){
                 }else if(user_input === "go back"){
                     current_location = locations[1]["name"]
                     $(".p1").empty().append("You are back in the courtyard")
+                }else if(user_input.substring(0, 6) === "remove"){
+                    remove(user_input, current_location, location_index)
                 }
                 break;
             case "The Crafting Room":
@@ -110,17 +112,19 @@ function on_input(input){
                 if(user_input.substring(0,4) === "take"){
                     take(user_input, current_location, location_index);
                 }else if(user_input === "craft key"){
-                    if(inventory.includes("Key Fragment 1") && inventory.includes("Key Fragment 2") && inventory.includes("Key Fragment 3")){
-                        inventory.splice(inventory.indexOf("Key Fragment 1"), inventory.indexOf("Key Fragment 1")+1);inventory.splice(inventory.indexOf("Key Fragment 2"), inventory.indexOf("Key Fragment 2")+1);inventory.splice(inventory.indexOf("Key Fragment 3"), inventory.indexOf("Key Fragment 3")+1);
+                    if(inventory[0] === "key fragment" && inventory[1] === "key fragment" && inventory[2] === "key fragment"){
+                        inventory.splice(0, inventory.length);
                         inventory.push("key");
                         $(".p1").empty().append("Crafted: An Ancient Key")
                     }
                 }else if (user_input === "craft armour"){
-                    if(inventory.includes("Dated Fusion Reactor") && inventory.includes("Boring Armour") && inventory.includes("Ionic Fabric")){
-                        inventory.splice(inventory.indexOf("Dated Fusion Reactor"), inventory.indexOf("Dated Fusion Reactor")+1);inventory.splice(inventory.indexOf("Boring Armour"), inventory.indexOf("Boring Armour")+1);inventory.splice(inventory.indexOf("Ionic Fabric"), inventory.indexOf("Ionic Fabric")+1);
-                        inventory.push("Ion-Reactor Armour");
-                        $(".p1").empty().append("Crafted: Ion-Reactor Armour")
+                    if(inventory.includes("fusion reactor") && inventory.includes("boring armour") && inventory.includes("ionic fabric")){
+                        inventory.splice(0, inventory.length);
+                        inventory.push("ionic armour");
+                        $(".p1").empty().append("Crafted: Ionic Armour")
                     }
+                }else if(user_input.substring(0, 6) === "remove"){
+                    remove(user_input, current_location, location_index)
                 }
                 else if (user_input === "go back"){
                     current_location = locations[2]["name"]
@@ -136,6 +140,8 @@ function on_input(input){
                 }else if (user_input === "go back"){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard")
+                }else if(user_input.substring(0, 6) === "remove"){
+                    remove(user_input, current_location, location_index)
                 }
                 break;
             case "The Sun Room":
@@ -147,6 +153,8 @@ function on_input(input){
                 }else if(user_input === "go back"){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard");
+                }else if(user_input.substring(0, 6) === "remove"){
+                    remove(user_input, current_location, location_index)
                 }
 
                 break;
@@ -157,7 +165,7 @@ function on_input(input){
                 }else if(user_input.substring(0,4) === "take"){
                     take(user_input, current_location, location_index);
                 }else if (user_input === "go door"){
-                    if(have_visited === false) {
+                    if(have_visited[1] === false) {
                         $(".p1").empty().append(locations[7]["description"]);
                         current_location = locations[7]["name"];
                     }else{
@@ -167,12 +175,14 @@ function on_input(input){
                     current_location = locations[1]["name"];
                     $(".p1").empty().append("You are back in the courtyard")
                     $(".p3").append(current_location)
+                }else if(user_input.substring(0, 6) === "remove"){
+                    remove(user_input, current_location, location_index)
                 }
                 break;
             case "The Do Not Enter Room":
                 location_index = 7
                 if(user_input === "go closer") {
-                    have_visited = true;
+                    have_visited[1] = true;
                     $(".p1").empty().append(locations[7]["on_look_around"])
                     current_location = locations[6]["name"];
 
@@ -203,6 +213,8 @@ function take(user_input, current_location, location_index){
         }
 
 
+    }else{
+        $(".p1").empty().append("This item is not in this room");
     }
 }
 function remove(user_input, current_location, location_index){ //drops the item but cannot be picked back up...
@@ -215,7 +227,9 @@ function remove(user_input, current_location, location_index){ //drops the item 
         for(let i = 0; i < 8; i++){
             for(let j = 0; j < locations[i]["items"].length; j++){
                 if(locations[i]["items"][j].includes(item_in_focus)){
+                    //console.log(locations[i]["items"] + " before")
                     locations[i]["items"].splice(j, j+1); //effectively drops the item where you are standing
+                    //console.log(locations[i]["items"] + " after")
                     locations[i]["taken"].splice(j, j+1);
                     locations[location_index]["items"].push(item_in_focus);
                     locations[location_index]["taken"].push(false);
