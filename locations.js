@@ -97,8 +97,8 @@ let locations = [
         on_look_around: "To the far side of the room, there is another door with a sign next to it, stating: 'DO NOT ENTER'. Directly " +
             "adjacent, there is an armour stand, and upon it was what can only be described as the most boring suit of armour" +
             "you have ever seen. It was grey and dull and boring, however seemingly solidly built.",
-        items: ["concentrated dark matter"],
-        taken: [false]
+        items: ["concentrated dark matter", "boring armour"],
+        taken: [false, false]
     },
     { // index 7
         name: "The Do Not Enter Room",

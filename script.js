@@ -90,6 +90,7 @@ function on_input(input){
                     if(inventory.includes("handgun")){
                         current_location = locations[3]["name"];
                         $(".p1").empty().append(locations[3]["description"]);
+                        have_visited[0] = true;
                     }else if(have_visited[0] === true){
                         current_location = locations[3]["name"];
                         $(".p1").empty().append("You are now in the crafting Room")
