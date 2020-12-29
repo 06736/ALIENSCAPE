@@ -2,6 +2,7 @@
 let current_location = "Courtyard";
 let inventory = [];
 let have_visited = [false, false];
+
 //                 rucksack  gun   spyglass dmc    k.f
 let items_taken = [false,    false, false, false, false,false,false];
 function main_menu() {
@@ -26,16 +27,23 @@ function new_input(){
             on_input(input);
         }
     });
-    document.body.appendChild(input);
+    document.getElementById("input_div").appendChild(input);
 }
 //finds the current location and gives the visual cue depending on
+function new_p(){
+    let p = document.createElement("P")
+    p.setAttribute("id", "p2")
+    document.get.appendChild(p);
+}
 
 
 
 
 function courtyard_initial(){
     $(".p1").append(locations[1]["description"]).fadeIn("normal");
+
     new_input();
+
 
 
 
@@ -44,10 +52,12 @@ function on_input(input){
     //will run until the user types "quit"
     let location_index = 0;
     let quit = false;
+
     while(quit === false) {
         console.log(locations[1]["items"]);console.log(locations[1]["taken"])
         let user_input = $("input").val().toLowerCase();
         $(input).val("");
+
         switch (current_location){
             case "Courtyard":
                 location_index = 1;
@@ -192,6 +202,11 @@ function on_input(input){
             case "The Mirror Room":
                 break;
         }
+        $("#inventory_1").empty().append(inventory[0])
+        $("#inventory_2").empty().append(inventory[1])
+        $("#inventory_3").empty().append(inventory[2])
+        $("#current_location1").empty().append(current_location)
+
 
 
         quit = true;
