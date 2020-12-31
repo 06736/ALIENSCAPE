@@ -81,6 +81,7 @@ input[type="text"] {
     padding: 50px;
 }
 #inventory_div{
+    visibility: hidden;
     border-style: solid;
     border-color: white;
     position: absolute;
@@ -97,6 +98,7 @@ input[type="text"] {
 
 }
 #current_location_div{
+    visibility: hidden;
     border-style: solid;
     border-color: white;
     position: absolute;
@@ -112,6 +114,7 @@ input[type="text"] {
     background: rgba(0, 0, 0, 0.5);
 }
 #objective_div{
+    visibility: hidden;
     border-style: solid;
     border-color: white;
     position: absolute;

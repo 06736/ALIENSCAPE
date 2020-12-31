@@ -4,6 +4,7 @@ let inventory = ["key"];
 let have_visited = [false, false, false];
 let current_objective = "Break into the Crafting Room";
 let objective_check = [false, false, false]
+
 function main_menu() {
     $(document).ready(function () {
         $(".h1").fadeOut("2000", function () {
@@ -70,7 +71,9 @@ function on_input(input){
                 break;
             case "Courtyard":
                 location_index = 1;
-
+                $("#current_location_div").css("visibility", "visible");
+                $("#objective_div").css("visibility", "visible");
+                $("#inventory_div").css("visibility", "visible");
                 if (user_input === "go north"){ // the star room
                     current_location = locations[2]["name"];
                     $(".p1").empty().append(locations[2]["description"])

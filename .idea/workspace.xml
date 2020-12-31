@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.12&#10;very nice! all round smoothing" />
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +100,8 @@
       <workItem from="1609192071394" duration="251000" />
       <workItem from="1609234069673" duration="11070000" />
       <workItem from="1609269234000" duration="5815000" />
+      <workItem from="1609276035168" duration="317000" />
+      <workItem from="1609434231719" duration="2869000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -244,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609275041068</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;">
+      <created>1609276349401</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609276349401</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +296,8 @@
     <MESSAGE value="pre-alpha 1.11&#10;has a tutorial&#10;will smooth the story then beta release!" />
     <MESSAGE value="pre-alpha 1.1101&#10;literally just rounded the borders to the lil boxes hahaha" />
     <MESSAGE value="pre-alpha 1.12&#10;very nice! all round smoothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.12&#10;very nice! all round smoothing" />
+    <MESSAGE value="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">
