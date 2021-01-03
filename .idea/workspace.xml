@@ -22,8 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;">
+    <list default="true" id="4a39a17a-4616-4691-b389-4359aba634ef" name="Default Changelist" comment="pre-alpha 1.14&#10;The divs now only show when the game starts(not during tutorial / homescreen)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/locations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -101,7 +103,11 @@
       <workItem from="1609234069673" duration="11070000" />
       <workItem from="1609269234000" duration="5815000" />
       <workItem from="1609276035168" duration="317000" />
-      <workItem from="1609434231719" duration="2869000" />
+      <workItem from="1609434231719" duration="3755000" />
+      <workItem from="1609521696031" duration="9000" />
+      <workItem from="1609530378552" duration="2058000" />
+      <workItem from="1609701932968" duration="5000" />
+      <workItem from="1609705273554" duration="3081000" />
     </task>
     <task id="LOCAL-00001" summary="Has working main menu button, js needs a bit of touching (order-wise)">
       <created>1607723563746</created>
@@ -257,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609276349401</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pre-alpha 1.14&#10;The divs now only show when the game starts(not during tutorial / homescreen)">
+      <created>1609451398366</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609451398366</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +310,8 @@
     <MESSAGE value="pre-alpha 1.1101&#10;literally just rounded the borders to the lil boxes hahaha" />
     <MESSAGE value="pre-alpha 1.12&#10;very nice! all round smoothing" />
     <MESSAGE value="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.13&#10;centered some css stuff so it isn't &quot;cringe&quot;" />
+    <MESSAGE value="pre-alpha 1.14&#10;The divs now only show when the game starts(not during tutorial / homescreen)" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-alpha 1.14&#10;The divs now only show when the game starts(not during tutorial / homescreen)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1208" y="280" key="#Images" timestamp="1607631627846">

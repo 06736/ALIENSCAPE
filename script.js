@@ -49,7 +49,7 @@ function on_input(input){
         let user_input = $("input").val().toLowerCase();
         $(input).val("");
         $("#objective").empty().append(current_objective);
-        console.log(current_objective + "Hi")
+        $("#hint").css("visibility", "hidden")
         switch (current_location){
             case "Tutorial":
                 location_index = 0
@@ -106,6 +106,8 @@ function on_input(input){
                 }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
                     console.log(user_input.substring(0, 4))
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Star Room":
@@ -134,6 +136,8 @@ function on_input(input){
                     $(".p1").empty().append("You are back in the courtyard")
                 }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Crafting Room":
@@ -159,6 +163,8 @@ function on_input(input){
                 else if (user_input === "go back"){
                     current_location = locations[2]["name"]
                     $(".p1").empty().append(locations[2]["description"]);
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Moon Room":
@@ -172,6 +178,8 @@ function on_input(input){
                     $(".p1").empty().append("You are back in the courtyard")
                 }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Sun Room":
@@ -185,6 +193,8 @@ function on_input(input){
                     $(".p1").empty().append("You are back in the courtyard");
                 }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
 
                 break;
@@ -209,6 +219,8 @@ function on_input(input){
                     $(".p3").append(current_location)
                 }else if(user_input.substring(0, 4) === "drop"){
                     remove(user_input, current_location, location_index)
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Do Not Enter Room":
@@ -218,6 +230,8 @@ function on_input(input){
                     $(".p1").empty().append(locations[7]["on_look_around"])
                     current_location = locations[6]["name"];
 
+                }else if(user_input === "?"){
+                    hint(location_index);
                 }
                 break;
             case "The Mirror Room":
@@ -225,21 +239,16 @@ function on_input(input){
                 objective_check[2] = true;
                 break;
         }
-        if(have_visited[1] === true){
-            if(user_input === "take ionic fabric"){
-                $(".p1").empty().append("Acquired: Ionic Fabric");
-                inventory.push("ionic fabric")
-            }
-        }
+
         if(user_input === "read manual"){
             if(inventory.includes("manual")){
                 $(".p1").empty().append("CRAFTING RECIPES: 3 KEY FRAGMENTS = KEY | IONIC FABRIC + FUSION REACTOR + ARMOUR = IONIC ARMOUR")
             }
         }
-        $("#inventory_1").empty().append(inventory[0])
-        $("#inventory_2").empty().append(inventory[1])
-        $("#inventory_3").empty().append(inventory[2])
-        $("#current_location1").empty().append(current_location)
+        $("#inventory_1").empty().append(inventory[0]);
+        $("#inventory_2").empty().append(inventory[1]);
+        $("#inventory_3").empty().append(inventory[2]);
+        $("#current_location1").empty().append(current_location);
 
 
 
@@ -290,6 +299,14 @@ function remove(user_input, current_location, location_index){ //drops the item 
     }else{
         $(".p1").empty().append("That item doesn't exist!")
     }
+
+}
+function hint(location_index){
+    let temp = "";
+    for (let i = 0; i < locations[location_index]["items"].length; i++){
+        temp += locations[location_index]["items"][i];
+    }
+    $("#hint").css("visibility", "visible").empty().append(locations[location_index]["hint"] + locations[location_index]["items"]);
 
 }
 function play_the_game(){
